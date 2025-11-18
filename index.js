@@ -17,7 +17,7 @@ const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 app.get("/api/suggest", async (req, res) => {
     try {
         const prompt = `Create ONE specific and concrete task to practice React.
-    The task should be brief, clear, and achievable in under 30 minutes.
+    The task should be up to 65 characters, clear, and achievable in under 30 minutes.
     Respond only with the task description, without additional explanations.`;
 
         const result = await model.generateContent(prompt);
